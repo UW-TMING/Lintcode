@@ -2,7 +2,6 @@ package Solution100_200;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 
 public class Solution_138 {
 	public ArrayList<Integer> subarraySum(int[] nums) {

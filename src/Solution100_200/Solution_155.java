@@ -1,7 +1,5 @@
 package Solution100_200;
 
-import java.util.Stack;
-
 public class Solution_155 {
 	public int minDepth(TreeNode root) {
 		return depth (root);
