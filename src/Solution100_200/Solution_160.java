@@ -8,16 +8,12 @@ public class Solution_160 {
 	}
 	public int findMin(int[] num) {
 		if (num == null || num.length == 0)  return 0;
-		int left = 0;
-		int right = num.length - 1;
-		while (left + 1 < right) {
-			int mid = (left + right) / 2;
-			if (num[mid] < num[left]) {
-				right = mid;
-			} else if (num[mid] >= num[right])  {
-				left = mid;
+		int min = Integer.MAX_VALUE;
+		for (int i = 0; i < num.length; i ++) {
+			if (min > num[i]) {
+				min = num[i];
 			}
 		}
-        return Math.min(num[left], num[right]);
+		return min;
     }
 }
