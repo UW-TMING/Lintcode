@@ -26,12 +26,21 @@ public class CountingSort {
 	        for(int i=0;i<a.length;++i){
 	            c[a[i]-min]+=1;//优化过的地方，减小了数组c的大小
 	        }
+	        printC(c);
 	        for(int i=1;i<c.length;++i){
 	            c[i]=c[i]+c[i-1];
 	        }
+	        printC(c);
 	        for(int i=a.length-1;i>=0;--i){
 	            b[--c[a[i]-min]]=a[i];//按存取的方式取出c的元素
 	        }
 	        return b;
+	    }
+	    public static void printC (int[] c) {
+	    		System.out.println ("================");
+	    		for (int i : c) {
+	    			System.out.print (i + " ");
+	    		}
+	    		System.out.println ("\n================");
 	    }
 }
