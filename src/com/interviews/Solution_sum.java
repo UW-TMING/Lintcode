@@ -19,17 +19,21 @@ public class Solution_sum {
         ans.add(start);
         ans.add(start);
         for (int i = 1; i < nums.length; i ++) {
-        		if (sum == 0) {
-        			start = i;
+        		if (sum == max) {
         			ans.set(0, start);
         			ans.set(1, i - 1);
-        			return ans;
+        			max = sum;
+        		}
+        		if (sum < 0) {
+        			start = i;
+        			sum = 0;
         		}
         		sum += nums[i];
         }
-        if (sum == 0) {
-        		ans.set(0, start);
+        if (sum > max) {
+        	ans.set(0, start);
 			ans.set(1, nums.length - 1);
+        		max = sum;
         }
         return ans;
     }
