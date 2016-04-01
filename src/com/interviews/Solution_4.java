@@ -11,7 +11,7 @@ public class Solution_4 {
 		return sum;
 	}
 }
-class Test {
+class Test1 {
 	public static void main (String[] args) {
 		int temp = Integer.MIN_VALUE;
 		System.out.println (temp>>31);
